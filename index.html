@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2 Upper-Intermediate • Unit 19: Onomatopoeic Words & Sensory Verbs</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: #161f30;
+            --subcard-bg: #1e293b;
+            --border-color: #334155;
+            --text-main: #cbd5e1;
+            --text-bright: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-cyan: #22d3ee;
+            --accent-purple: #c084fc;
+            --accent-amber: #f59e0b;
+            --accent-emerald: #3fb950;
+            --accent-crimson: #f85149;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .header-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 34px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .header-card h1 {
+            color: var(--text-bright);
+            font-size: 2.1rem;
+            margin-bottom: 8px;
+        }
+
+        .header-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .section-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .svg-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            color: var(--accent-cyan);
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            color: var(--accent-cyan);
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .exercise {
+            background-color: var(--subcard-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exercise-title {
+            color: var(--text-bright);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .instruction {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        .instruction em {
+            color: var(--accent-amber);
+            font-style: normal;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        li {
+            font-size: 0.95rem;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .vocab-table th, .vocab-table td {
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.93rem;
+        }
+
+        .vocab-table th {
+            color: var(--accent-blue);
+            background-color: rgba(56, 189, 248, 0.08);
+            font-weight: 600;
+        }
+
+        .vocab-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .word {
+            font-weight: 600;
+            color: var(--text-bright);
+        }
+
+        .text-box {
+            background-color: #0f172a;
+            border-left: 4px solid var(--accent-blue);
+            padding: 18px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .text-box p {
+            margin-bottom: 12px;
+        }
+
+        .text-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .theory-box {
+            background: rgba(192, 132, 252, 0.07);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 10px;
+        }
+
+        .theory-box h4 {
+            color: #d8b4fe;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            background-color: #0b1120;
+            border: 1px solid var(--border-color);
+            color: #f8fafc;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.92rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+        }
+
+        input[type="text"].correct {
+            border-color: var(--accent-emerald) !important;
+            background-color: rgba(63, 185, 80, 0.12) !important;
+        }
+
+        input[type="text"].incorrect {
+            border-color: var(--accent-crimson) !important;
+            background-color: rgba(248, 81, 73, 0.12) !important;
+        }
+
+        textarea {
+            width: 100%;
+            background-color: #0b1120;
+            border: 1px solid var(--border-color);
+            color: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.93rem;
+            font-family: inherit;
+            outline: none;
+            resize: vertical;
+            min-height: 95px;
+            line-height: 1.6;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-cyan);
+        }
+
+        .btn-check {
+            align-self: flex-start;
+            background-color: #1e293b;
+            color: var(--text-bright);
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 4px;
+        }
+
+        .btn-check:hover {
+            background-color: #334155;
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .feedback-msg {
+            font-size: 0.88rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .feedback-msg.show {
+            display: block;
+        }
+
+        .feedback-msg.good {
+            color: var(--accent-emerald);
+        }
+
+        .feedback-msg.bad {
+            color: var(--accent-crimson);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-card">
+        <span class="badge">B2 Upper-Intermediate • Unit 19</span>
+        <h1>The Soundscape of Language: Onomatopoeia</h1>
+        <p>Phonetic Iconicity, Sound Symbolism & Sensory Description • Grammar: Verbs of Perception and Sensory Patterns</p>
+    </div>
+
+    <!-- 1. WARM UP -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            <div class="section-title">1. Warm-Up</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Exercise 1.1: Sound Associations in Speech</div>
+            <div class="instruction">Discuss these questions with your tutor using 2–3 full sentences:</div>
+            <ul>
+                <li>Have you ever noticed that words beginning with letters like <em>gr-</em> (groan, grumble, growl) usually suggest something negative or unpleasant[cite: 15]? Does your native language have similar phonetic clusters[cite: 15]?</li>
+                <li>Why do authors and poets use onomatopoeia: is it purely decorative, or does it trigger an immediate psychological reaction in the reader's imagination[cite: 15]?</li>
+                <li>Which everyday ambient sound do you find most calming (e.g. rain drizzling, bacon sizzling in a pan, a crackling fireplace)[cite: 15]?</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Exercise 1.2: Consonant Sound Clusters</div>
+            <div class="instruction">Match the English consonant pattern with the physical sensation it typically conveys[cite: 15]:</div>
+            <ol>
+                <li><b>gr-</b> (groan, grumble, grunt, growl) &rarr; [ <input type="text" size="4" data-ans="c" placeholder="..."> ][cite: 15]</li>
+                <li><b>cl-</b> (click, clang, clank, clash, clink) &rarr; [ <input type="text" size="4" data-ans="a" placeholder="..."> ][cite: 15]</li>
+                <li><b>sp-</b> (splash, spit, sputter, spray, sprinkle, spurt) &rarr; [ <input type="text" size="4" data-ans="d" placeholder="..."> ][cite: 15]</li>
+                <li><b>wh-</b> (whistle, whirr, whizz, wheeze) &rarr; [ <input type="text" size="4" data-ans="b" placeholder="..."> ][cite: 15]</li>
+            </ol>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">
+                <b>a.</b> Sharp, metallic, or abrupt collision sounds[cite: 15]<br>
+                <b>b.</b> Movement of air, rapid wind rushing, or high-pitched sound[cite: 15]<br>
+                <b>c.</b> Unpleasant, miserable, negative, or bad-tempered noise[cite: 15]<br>
+                <b>d.</b> Scattering liquids, powders, or moisture bursting out[cite: 15]
+            </p>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 2. VOCABULARY -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            <div class="section-title">2. Vocabulary: High-Frequency Onomatopoeic Verbs</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Key Lexical Inventory</div>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Phonetic / Association</th>
+                        <th>Definition</th>
+                        <th>Russian Translation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="word">click</td>
+                        <td>cl- (sharp sound)[cite: 15]</td>
+                        <td>to make a short, sharp mechanical sound[cite: 15]</td>
+                        <td>щелкать[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">clink</td>
+                        <td>cl- (light metallic/glass)[cite: 15]</td>
+                        <td>to make a light ringing sound of glasses or small metal touching[cite: 15]</td>
+                        <td>чокаться, звенеть (бокалами)[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">grumble</td>
+                        <td>gr- (negative / low)[cite: 15]</td>
+                        <td>to complain in a bad-tempered, muttering voice[cite: 15]</td>
+                        <td>ворчать, брюзжать[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">whirr</td>
+                        <td>wh- (moving air)[cite: 15]</td>
+                        <td>to make a low, continuous sound of rapid rotation[cite: 15]</td>
+                        <td>жужжать, гудеть (о лопастях, моторе)[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sizzle</td>
+                        <td>-zzle (repetitive)[cite: 15]</td>
+                        <td>to make a hissing sound when frying in hot fat[cite: 15]</td>
+                        <td>шкворчать, шипеть (на сковороде)[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">creak</td>
+                        <td>friction / wood</td>
+                        <td>to make a high-pitched grating sound when bent or moved[cite: 15]</td>
+                        <td>скрипеть (о дверях, ступеньках)[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">drizzle</td>
+                        <td>-zzle (light continuous)[cite: 15]</td>
+                        <td>to rain in very small, fine, mist-like drops[cite: 15]</td>
+                        <td>моросить[cite: 15]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">splosh / splash</td>
+                        <td>sp- (liquids)[cite: 15]</td>
+                        <td>to move noisily through water and send droplets flying[cite: 15]</td>
+                        <td>шлёпать по лужам, брызгаться[cite: 15]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Vocab 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.1: Context Gap-Fill</div>
+            <div class="instruction">Fill in the gaps with the correct verb from the list: <em>[clicked, whirring, sizzle, clinked, creak, drizzling]</em>[cite: 15]</div>
+            <ol>
+                <li>She heard his key <input type="text" data-ans="click|clicked" placeholder="..."> as it turned in the rusty lock[cite: 15].</li>
+                <li>The blades of the helicopter propeller began <input type="text" data-ans="whirring" placeholder="..."> noisily above the tarmac[cite: 15].</li>
+                <li>I love listening to bacon and sausages <input type="text" data-ans="sizzle" placeholder="..."> in the pan on Sunday mornings[cite: 15].</li>
+                <li>The guests raised their glasses and <input type="text" data-ans="clinked" placeholder="..."> them together to toast the newlyweds[cite: 15].</li>
+                <li>Those old wooden floorboards always <input type="text" data-ans="creak" placeholder="..."> when you walk across the bedroom at night[cite: 15].</li>
+                <li>It's not raining heavily yet; it's just <input type="text" data-ans="drizzling" placeholder="..."> outside[cite: 15].</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Vocab 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.2: Subject-Verb Sound Pairings</div>
+            <div class="instruction">Pair the nouns with their natural onomatopoeic verb from Unit 19: <em>[tinkles, clanks, whistles, groans, wheezes]</em>[cite: 15]</div>
+            <ol>
+                <li>a tiny brass bell on a cat's collar &rarr; <input type="text" data-ans="tinkles" placeholder="...">[cite: 15]</li>
+                <li>a heavy iron bicycle chain &rarr; <input type="text" data-ans="clanks" placeholder="...">[cite: 15]</li>
+                <li>a high-pressure steam train engine &rarr; <input type="text" data-ans="whistles" placeholder="...">[cite: 15]</li>
+                <li>an exhausted patient suffering from asthma &rarr; <input type="text" data-ans="wheezes" placeholder="...">[cite: 15]</li>
+                <li>an injured player lying in severe pain &rarr; <input type="text" data-ans="groans" placeholder="...">[cite: 15]</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Vocab 3 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.3: Identifying Exceptions</div>
+            <div class="instruction">Choose the correct item based on word class and grammar[cite: 15]:</div>
+            <ol>
+                <li>Which of these words is <b>only an adjective</b> (not a verb or noun): <em>(gash, grumpy, wheeze, whirr)</em>? &rarr; <input type="text" data-ans="grumpy" placeholder="...">[cite: 15]</li>
+                <li>Which verb is <b>irregular</b> in the past tense: <em>(whip, grunt, spit, wriggle)</em>? &rarr; <input type="text" data-ans="spit" placeholder="...">[cite: 15]</li>
+                <li>Which onomatopoeic word means to laugh in a quiet, high-pitched, childish way: <em>(grunt, smash, giggle, sputter)</em>? &rarr; <input type="text" data-ans="giggle" placeholder="...">[cite: 15]</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 3. READING -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.5 1 5.5v15.5c1.45-1.1 3.55-1.5 5.5-1.5s4.05.4 5.5 1.5c1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5V5z"/></svg>
+            <div class="section-title">3. Reading: The Psychology of Phonaesthetics</div>
+        </div>
+
+        <div class="text-box">
+            <p><strong>Paragraph 1: The Illusion of Arbitrary Language.</strong> For centuries, structural linguists argued that human language is fundamentally arbitrary: there is no intrinsic, physical connection between the sequence of letters in the word "tree" and the biological plant rooted in soil. However, modern cognitive research into sound symbolism reveals that our brains naturally perceive meaning directly from acoustic frequencies. Onomatopoeia represents the clearest manifestation of this bridge between auditory sensation and neurological conceptualisation[cite: 15].</p>
+
+            <p><strong>Paragraph 2: Phonesthemes and Cognitive Clusters.</strong> English contains subtle phonetic clusters known as phonesthemes that trigger subconscious visual and tactile expectations[cite: 15]. For instance, initial consonant combinations like <em>gl-</em> evoke luminous physical qualities (<em>glimmer, glitter, glow, glance</em>), while words ending in <em>-ash</em> denote violent, instantaneous fragmentation (<em>smash, crash, bash</em>)[cite: 15]. When listeners hear an unfamiliar word like "splosh" or "whizz", they do not need a dictionary to infer whether it involves rapid movement or a liquid impact[cite: 15].</p>
+
+            <p><strong>Paragraph 3: Creative Writing and Sensory Immersion.</strong> In contemporary literature and commercial marketing, onomatopoeic words serve as sensory accelerants. Instead of stating that an old house was scary, an author notes that "the floorboards creaked beneath hesitant footsteps while wind wheezed through decaying window frames"[cite: 15]. By bypassing analytical decoding and activating the auditory cortex directly, echoic terms allow readers to inhabit a narrative scene physically rather than merely observing it intellectually.</p>
+        </div>
+
+        <!-- Reading 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 3.1: Text Comprehension True / False</div>
+            <div class="instruction">Mark each statement as <b>True (T)</b> or <b>False (F)</b> based on the text:</div>
+            <ol>
+                <li>Modern cognitive science supports the idea that all words in language are completely arbitrary. &rarr; [ <input type="text" size="4" data-ans="f" placeholder="..."> ]</li>
+                <li>Phonesthemes like <em>-ash</em> typically convey notions of violent or sudden destruction[cite: 15]. &rarr; [ <input type="text" size="4" data-ans="t" placeholder="..."> ]</li>
+                <li>Readers can often infer the physical nature of an echoic word without consulting a formal dictionary[cite: 15]. &rarr; [ <input type="text" size="4" data-ans="t" placeholder="..."> ]</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Reading 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 3.2: Vocabulary in Context</div>
+            <div class="instruction">Find words in the text corresponding to these definitions:</div>
+            <ol>
+                <li>Based on random choice or personal whim, rather than any logical reason (Paragraph 1): &rarr; <input type="text" data-ans="arbitrary" placeholder="..."></li>
+                <li>Relating to the sense of hearing or sound perception (Paragraph 1): &rarr; <input type="text" data-ans="auditory" placeholder="..."></li>
+                <li>Substances or techniques that speed up a chemical or physical reaction (Paragraph 3): &rarr; <input type="text" data-ans="accelerants" placeholder="..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 4. GRAMMAR -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.7V7z"/></svg>
+            <div class="section-title">4. Grammar: Verbs of Perception and Sensory Patterns</div>
+        </div>
+
+        <div class="theory-box">
+            <h4>Sensory Verbs & Complementation Patterns</h4>
+            <p><strong>1. Linking Verb Structures:</strong> Verbs of sensation (<em>sound, look, feel, smell, taste</em>) connect a subject to an adjective, noun phrase, or clause:</p>
+            <ul>
+                <li><strong>Verb + Adjective:</strong> <em>That engine <b>sounds strange</b>.</em> (NOT: <s>sounds strangely</s>)</li>
+                <li><strong>Verb + like + Noun:</strong> <em>It <b>sounds like</b> a whistling kettle.</em>[cite: 15]</li>
+                <li><strong>Verb + as if / as though + Clause:</strong> <em>It <b>feels as if</b> the floorboards are about to collapse.</em></li>
+            </ul>
+            <p style="margin-top: 8px;"><strong>2. Direct Perception Patterns (Hear, See, Feel + Object):</strong></p>
+            <ul>
+                <li><strong>Verb + Object + Bare Infinitive:</strong> Completing or witnessing the <i>entire action</i> from beginning to end.<br>
+                <em>I <b>heard the key click</b> in the lock.</em> (A single completed action)[cite: 15]</li>
+                <li><strong>Verb + Object + -ing Form:</strong> Experiencing an <i>action in progress</i> or ongoing sound.<br>
+                <em>I <b>heard the sausages sizzling</b> in the kitchen.</em> (Continuous background sound)[cite: 15]</li>
+            </ul>
+        </div>
+
+        <!-- Grammar 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.1: Adjective vs. Adverb & 'Like' Placement</div>
+            <div class="instruction">Choose the grammatically accurate option:</div>
+            <ol>
+                <li>The water coming out of the fountain smells (<i>awful / awfully</i>). &rarr; <input type="text" data-ans="awful" placeholder="..."></li>
+                <li>That metal pipe sounds (<i>like / as</i>) an old radiator when it heats up. &rarr; <input type="text" data-ans="like" placeholder="..."></li>
+                <li>Her voice sounded (<i>hesitant / hesitantly</i>) as she answered the detective's questions. &rarr; <input type="text" data-ans="hesitant" placeholder="..."></li>
+                <li>It looks (<i>as if / like that</i>) the storm is going to tear down the tent. &rarr; <input type="text" data-ans="as if" placeholder="..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Grammar 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.2: Bare Infinitive vs. -ing Perception Patterns</div>
+            <div class="instruction">Complete using the base form or <b>-ing</b> according to whether the action is a completed click/event or an ongoing noise[cite: 15]:</div>
+            <ol>
+                <li>I heard the heavy door <input type="text" data-ans="slam" placeholder="slam..."> shut with a loud bang. (single completed event)</li>
+                <li>We stood by the fireplace and listened to the wet logs <input type="text" data-ans="crackling" placeholder="crackle..."> softly. (ongoing continuous sound)[cite: 15]</li>
+                <li>She watched the vase <input type="text" data-ans="smash" placeholder="smash..."> into hundreds of tiny pieces on the floor. (instant result)[cite: 15]</li>
+                <li>Can you hear someone <input type="text" data-ans="whispering" placeholder="whisper..."> outside the bedroom window? (action in progress)</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Grammar 3 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.3: Spot and Correct the Mistake</div>
+            <div class="instruction">Identify the grammatical flaw and write the corrected sentence in full:</div>
+            <ol>
+                <li>
+                    That violin performance sounded beautifully to the listeners.<br>
+                    &rarr; <input type="text" style="width: 85%;" data-ans="that violin performance sounded beautiful to the listeners|that violin performance sounded beautiful to the listeners." placeholder="...">
+                </li>
+                <li>
+                    I heard the cat to purr quietly on the rug.<br>
+                    &rarr; <input type="text" style="width: 85%;" data-ans="i heard the cat purr quietly on the rug|i heard the cat purring quietly on the rug" placeholder="...">
+                </li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 5. SPEAKING -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <div class="section-title">5. Speaking: Descriptive Immersion & Acoustic Guessing</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Task 5.1: The Acoustic Atmosphere Challenge</div>
+            <div class="instruction">Choose one of the settings below. Describe it in rich detail to your tutor without naming the place, using at least three onomatopoeic words and sensory structures (<em>it sounds like, you can hear... -ing</em>)[cite: 15]:</div>
+            <ul>
+                <li><strong>Setting A:</strong> An old country kitchen early on a rainy morning (<em>sizzling, creaking, dripping, whistling</em>)[cite: 15].</li>
+                <li><strong>Setting B:</strong> A stormy coastal harbour at midnight (<em>crashing waves, howling wind, clanking chains</em>)[cite: 15].</li>
+                <li><strong>Setting C:</strong> A packed underground railway station at rush hour (<em>rumbling, screeching brakes, clicking heels</em>).</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Task 5.2: Phonaesthetic Evaluation (Debate)</div>
+            <div class="instruction">Discuss with your tutor:</div>
+            <ul>
+                <li>English has borrowed and adapted hundreds of echoic words, while many other languages rely more heavily on adverbs or ideophones. Why do you think English has such an extensive inventory of words beginning with clusters like <em>gr-</em>, <em>sp-</em>, or <em>wh-</em>[cite: 15]?</li>
+                <li>Do you agree that onomatopoeic advertising makes food and beverage marketing significantly more persuasive (e.g. <em>crunchy, sizzling, bubbling</em>)[cite: 15]?</li>
+            </ul>
+            <textarea id="speaking_ono_notes" placeholder="Tutor feedback and vocabulary notes..."></textarea>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // LocalStorage Auto-Save
+    document.addEventListener("DOMContentLoaded", () => {
+        const fields = document.querySelectorAll("input[type='text'], textarea");
+        fields.forEach((field, idx) => {
+            const saved = localStorage.getItem("ono_b2_field_" + idx);
+            if (saved !== null) field.value = saved;
+            field.addEventListener("input", () => {
+                localStorage.setItem("ono_b2_field_" + idx, field.value);
+            });
+        });
+    });
+
+    function cleanStr(s) {
+        return s.toLowerCase()
+                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+    }
+
+    // Input Validation
+    function checkTask(btn) {
+        const container = btn.closest(".exercise");
+        const inputs = container.querySelectorAll("input[type='text']");
+        const feedback = container.querySelector(".feedback-msg");
+        let allOk = true;
+        let count = 0;
+
+        inputs.forEach(input => {
+            const possible = (input.getAttribute("data-ans") || "").split("|").map(cleanStr);
+            const val = cleanStr(input.value);
+            if (val.length > 0) count++;
+
+            if (possible.includes(val)) {
+                input.classList.remove("incorrect");
+                input.classList.add("correct");
+            } else {
+                input.classList.remove("correct");
+                input.classList.add("incorrect");
+                allOk = false;
+            }
+        });
+
+        feedback.classList.add("show");
+        if (allOk && count === inputs.length) {
+            feedback.className = "feedback-msg show good";
+            feedback.textContent = "All answers are correct! Great work.";
+        } else {
+            feedback.className = "feedback-msg show bad";
+            feedback.textContent = "Some answers are incorrect or missing. Check your spelling and try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
